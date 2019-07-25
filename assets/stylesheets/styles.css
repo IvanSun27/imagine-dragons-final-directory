@@ -1,27 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,900&display=swap');
 
 * {
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  font-family: 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-  margin: 0;
-  padding: 0;
-}
-
-.container{
-  position: relative;
-  margin: auto;
-  padding: 0 20px;
-}
-
-a {
-  text-decoration: none;
 }
 
 .header {
@@ -43,70 +25,292 @@ a {
   max-height: 75px;
   float: left;
   padding: 10px 0;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
   font-family: 'Roboto', sans-serif;
 }
 
-.logo > a {
-  display: inline-block;
-  height: 100%;
-  line-height: 45px;
-  color: #fff;
-  font-size: 24px;
-}
-
-.nav-toggle{
-  display: none;
-  float: right;
-  margin-top: 3em;
-}
-
-.nav-toggle-label{
-  position: static;
-  top: 0;
-  left: 0;
-  margin-left: 1em;
-  border: 1px solid red;
-  height: 100%;
+nav ul {
   display: flex;
-  align-item: center;
+  justify-content: space-around;
+  width: 65%;
 }
 
-span{
-  float: right;
-}
-
- nav{
-   position: static;
-   text-align: right;
-   top: 100%;
-   left: 0;
-   background-color: rgba(2, 2, 2);
-   display: none;
-   width: 100%
- }
-
-nav ul{
-  margin: 0;
-  padding: 0;
+nav li {
   list-style: none;
+  margin-top: 15px;
+  margin-left: 15px;
 }
 
-nav li{
-  margin-bottom: 1em;
-  margin-left: 1em;
-}
-
-nav a{
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
 
 nav a:hover{
-  color: #555;
+    color: #555;
+  }
+
+.sticky {
+  position:fixed;
+  top: 0;
+  width:100%;
 }
 
-.nav-toggle:checked ~ nav{
-  display: block;
+h1 {
+  font-size: 30pt;
+  color: Black;
+  text-decoration:none;
+}
+
+.menu-icon {
+  width: 100%;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 24px 24px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
+}
+
+@media(max-width: 580px) {
+  .logo {
+    position: fixed;
+    top: 0;
+    margin-top: 3px;
+  }
+
+  nav ul {
+    max-height: 0px;
+    background: black;
+  }
+
+  nav.black ul {
+    background: black
+  }
+
+  .showing {
+    max-height: 20em;
+  }
+
+  nav ul li {
+    box-sizing: border-box;
+    width:100%;
+    padding: 24px 0;
+    text-align:center;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+}
+
+.bl-overlay{
+  background: rgba(0,0,0,0);
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btext-overlay {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 4vw
+}
+.id-overlay{
+  background: rgba(0,0,0,0);
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ltext-overlay {
+  color: white;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 4vw;
+}
+
+.video-container {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.video{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.video:before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background: #000000;
+  opacity: .1;
+}
+
+/*
+
+    ABOUT
+
+*/
+
+/* Container holding the image and the text (how to make the container responsive?)*/
+.m-container {
+  position:relative;
+  width: 100%;
+  height: 356px;
+  text-align: center;
+  box-shadow: inset 0px 0px 50px 40px rgba(0,0,0,0.75);
+  color: white;
+}
+.members {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: -2
+}
+
+.member1 {
+  position: absolute;
+  bottom: 46px;
+  left: 16px;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.role1 {
+  position: absolute;
+  bottom: 10px;
+  left: 16px;
+  font-size: 2vw;
+  font-weight: lighter;
+}
+
+.member2 {
+  position: absolute;
+  bottom: 46px;
+  left: 386px;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.role2 {
+  position: absolute;
+  bottom: 10px;
+  left: 386px;
+  font-size: 2vw;
+  font-weight: lighter;
+}
+
+.member3 {
+  position: absolute;
+  bottom: 46px;
+  left: 736px;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.role3 {
+  position: absolute;
+  bottom: 10px;
+  left: 736px;
+  font-size: 2vw;
+  font-weight: lighter;
+}
+
+.member4 {
+  position: absolute;
+  bottom: 46px;
+  left: 1106px;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.role4 {
+  position: absolute;
+  bottom: 10px;
+  left: 1106px;
+  font-size: 2vw;
+  font-weight: lighter;
+}
+
+.about-image {
+  max-width: 250px;
+  float: left;
+  padding-right: 10px;
+}
+
+.container {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  padding: 120px 20px;
+}
+
+
+/*
+
+    Tour Dates
+
+*/
+table {
+  color: #333;
+  width: 640px;
+  /* Table reset stuff */
+  border-collapse: collapse; border-spacing: 0;
+}
+
+td, th {  border: 0 none; height: 30px; }
+
+th {
+  /* Gradient Background */
+	background: linear-gradient(#333 0%,#444 100%);
+	color: #FFF; font-weight: bold;
+	height: 40px;
+}
+
+td { background: #FAFAFA; text-align: center; }
+
+/* Zebra Stripe Rows */
+
+tr:nth-child(even) td { background: #EEE; }
+tr:nth-child(odd) td { background: #FDFDFD; }
+
+/* Add border-radius to specific cells! */
+tr:first-child, th:first-child {
+  border-radius: 5px 0 0 0;
+}
+
+tr:first-child th:nth-child(2) {
+  border-radius: 0 0 0 0;
+}
+
+tr:first-child th:last-child {
+  border-radius: 0 5px 0 0;
 }
