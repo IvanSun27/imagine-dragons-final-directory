@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,900&display=swap');
 
+
+
 * {
   margin: 0px;
   padding: 0px;
@@ -76,7 +78,6 @@ h1 {
   font-size: 30pt;
   color: Black;
   text-decoration:none;
-  font-family: 'Roboto', sans-serif;
 }
 
 .menu-icon {
@@ -122,267 +123,18 @@ h1 {
 
 }
 
-.bl-overlay{
-  background: rgba(0,0,0,0);
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btext-overlay {
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  font-size: 4vw
-}
-.id-overlay{
-  background: rgba(0,0,0,0);
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.ltext-overlay {
-  color: white;
-  text-align: center;
-  font-weight: lighter;
-  font-size: 4vw;
-}
-
-.video-container {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-
-.video{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-/*
-
-    ABOUT
-
-*/
-
-/* Container holding the image and the text (how to make the container responsive?)*/
-.m-container {
-  position:relative;
-  width: 100%;
-  height: 360px;
-  text-align: center;
-  box-shadow: inset 0px 0px 50px 40px rgba(0,0,0,0.75);
-  color: white;
-}
-.members {
-  width: 100%;
-  height: auto;
-  position: relative;
-  z-index: -2
-}
-
-.member1 {
-  position: absolute;
-  bottom: 46px;
-  left: 16px;
-  font-size: 2vw;
-  font-weight: bold;
-}
-
-.role1 {
-  position: absolute;
-  bottom: 10px;
-  left: 16px;
-  font-size: 2vw;
-  font-weight: lighter;
-}
-
-.member2 {
-  position: absolute;
-  bottom: 46px;
-  left: 386px;
-  font-size: 2vw;
-  font-weight: bold;
-}
-
-.role2 {
-  position: absolute;
-  bottom: 10px;
-  left: 386px;
-  font-size: 2vw;
-  font-weight: lighter;
-}
-
-.member3 {
-  position: absolute;
-  bottom: 46px;
-  left: 736px;
-  font-size: 2vw;
-  font-weight: bold;
-}
-
-.role3 {
-  position: absolute;
-  bottom: 10px;
-  left: 736px;
-  font-size: 2vw;
-  font-weight: lighter;
-}
-
-.member4 {
-  position: absolute;
-  bottom: 46px;
-  left: 1106px;
-  font-size: 2vw;
-  font-weight: bold;
-}
-
-.role4 {
-  position: absolute;
-  bottom: 10px;
-  left: 1106px;
-  font-size: 2vw;
-  font-weight: lighter;
-}
-
-.about-image {
-  max-width: 250px;
-  float: left;
-  padding-right: 10px;
-}
-
 .container {
   position: relative;
   margin: auto;
   width: 100%;
-  margin-top: 100px;
+  margin-top:10px;
   margin-bottom: 100px;
 }
 
 
-/*
-
-    Tour Dates
-
-*/
-table {
-  margin-top: 50px;
-  color: #333;
-  width: 640px;
-  /* Table reset stuff */
-  border-collapse: collapse; border-spacing: 0;
-}
-
-td, th {  border: 0 none; height: 30px; }
-
-th {
-  /* Gradient Background */
-	background: linear-gradient(#333 0%,#444 100%);
-	color: #FFF; font-weight: bold;
-	height: 40px;
-}
-
-td { background: #FAFAFA; text-align: center; }
-
-/* Zebra Stripe Rows */
-
-tr:nth-child(even) td { background: #EEE; }
-tr:nth-child(odd) td { background: #FDFDFD; }
-
-/* Add border-radius to specific cells */
-tr:first-child, th:first-child {
-  border-radius: 5px 0 0 0;
-}
-
-tr:first-child th:nth-child(2) {
-  border-radius: 0 0 0 0;
-}
-
-tr:first-child th:last-child {
-  border-radius: 0 5px 0 0;
-}
-
-
-/*
-
-    Media
-
-*/
-
-.media-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 50px;
-}
-
-.media-card-wrapper {
-  width: 250px;
-  height: 250px;
-  position:relative;
-  text-align: center;
-}
-
-.media-card{
-  width: 200px;
-  height: 200px;
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto 25px;
-  border-radius: 4px;
-  overflow: hidden;
-  z-index: 0;
-  transition: all .3s ease-in-out;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.media-card > img {
-  width: 100%;
-  height: 100%;
-}
-
-.media-card:hover {
-  width: 220px;
-  height: 220px;
-  z-index: 10;
-  box-shadow: 0 40px 50px rgba(0, 0, 0, 0.2);
-}
-
-.media-list > iframe {
-  margin-bottom: 50px;
-  margin-right: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-/*
-
-  Discography
-
-*************************************************/
 
 
 
-/*
-
-  Merch
-
-*/
 
 
 /* --------------------------------
@@ -394,6 +146,11 @@ Primary style
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
 }
 
 /* --------------------------------
@@ -619,16 +376,16 @@ xgallery
 
 -------------------------------- */
 .mix {
-  width:600px;
-  height: 600px:
+  width:400px;
+  height: 400px:
 }
 .clothes {
-  width:600px;
-  height: 600px:
+  width:400px;
+  height: 400px:
 }
 .albums {
-  width:600px;
-  height: 600px:
+  width:400px;
+  height: 400px:
 }
 
 .cd-gallery {
@@ -787,7 +544,7 @@ xfilter
   text-indent: 100%;
   color: transparent;
   white-space: nowrap;
-  background: transparent url("./assets/images/cd-icon-filter.svg") no-repeat center center;
+  background: transparent url("../img/cd-icon-filter.svg") no-repeat center center;
   z-index: 3;
 }
 .cd-filter-trigger.filter-is-visible {
@@ -814,18 +571,4 @@ xfilter
   .cd-filter-trigger.filter-is-visible, .cd-filter-trigger.filter-is-visible:hover {
     color: #ffffff;
   }
-}
-
-/*
-   DISCOGRAPHY
- */
-
-
-.albums {
-  width: 300;
-  margin: 0 auto;
-}
-
-.albums img {
-  width: 100%
 }
