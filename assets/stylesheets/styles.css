@@ -59,6 +59,7 @@ nav a {
     color: white;
     font-weight: bold;
     font-size: 18px;
+    font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
   }
 
@@ -73,11 +74,44 @@ nav a:hover{
   width:100%;
 }
 
+
+@media (min-width: 736px) {
+  nav{
+    height: 45px;
+    font-size: 0;
+    display: flex !important;
+    justify-content: flex-end;
+    background-color: transparent;
+  }
+  nav > a {
+    width: auto;
+    height: 100%;
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 45px;
+    transition: all .25s ease-in-out;
+  }
+  .menu-icon {
+    display: none;
+  }
+}
+
 h1 {
   font-size: 30pt;
   color: Black;
   text-decoration:none;
   font-family: 'Roboto', sans-serif;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.6;
+  text-indent: 24px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
 
 .menu-icon {
@@ -135,13 +169,14 @@ h1 {
 .btext-overlay {
   color: white;
   text-align: center;
-  font-weight: bold;
-  font-size: 4vw
+  font-weight:700;
+  font-size: 4vw;
+  font-family: 'Roboto', sans-serif;
 }
 .id-overlay{
   background: rgba(0,0,0,0);
   position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
+  top: 40px; right: 0; bottom: 0; left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,7 +185,9 @@ h1 {
   color: white;
   text-align: center;
   font-weight: lighter;
-  font-size: 4vw;
+  font-size: 2vw;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 .video-container {
@@ -214,10 +251,11 @@ h1 {
 /* Container holding the image and the text */
 .m-container {
   position:relative;
+  top: 60px;
   width: 100%;
   height: 360px;
   text-align: center;
-  box-shadow: inset 0px 0px 50px 40px rgba(0,0,0,0.75);
+ /* box-shadow: inset 0px 0px 50px 40px rgba(0,0,0,0.75); */
   color: white;
 }
 .members {
@@ -233,6 +271,7 @@ h1 {
   left: 16px;
   font-size: 2vw;
   font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
 
 .role1 {
@@ -241,6 +280,7 @@ h1 {
   left: 16px;
   font-size: 2vw;
   font-weight: lighter;
+  font-family: 'Roboto', sans-serif;
 }
 
 .member2 {
@@ -249,6 +289,7 @@ h1 {
   left: 386px;
   font-size: 2vw;
   font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
 
 .role2 {
@@ -257,6 +298,7 @@ h1 {
   left: 386px;
   font-size: 2vw;
   font-weight: lighter;
+  font-family: 'Roboto', sans-serif;
 }
 
 .member3 {
@@ -265,6 +307,7 @@ h1 {
   left: 736px;
   font-size: 2vw;
   font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
 
 .role3 {
@@ -273,6 +316,7 @@ h1 {
   left: 736px;
   font-size: 2vw;
   font-weight: lighter;
+  font-family: 'Roboto', sans-serif;
 }
 
 .member4 {
@@ -281,6 +325,7 @@ h1 {
   left: 1106px;
   font-size: 2vw;
   font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
 
 .role4 {
@@ -289,12 +334,14 @@ h1 {
   left: 1106px;
   font-size: 2vw;
   font-weight: lighter;
+  font-family: 'Roboto', sans-serif;
 }
 
 .about-image {
   max-width: 250px;
   float: left;
-  padding-right: 10px;
+  padding:10 10 0 0;
+
 }
 
 .container {
@@ -616,6 +663,7 @@ xtab-filter
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
   }
   .no-touch .cd-tab-filter a:hover {
     color: #000;
@@ -784,6 +832,7 @@ xfilter
   -moz-transition: opacity 0.3s;
   transition: opacity 0.3s;
   z-index: 3;
+  font-family: 'Roboto', sans-serif;
 }
 .no-touch .cd-filter .cd-close:hover {
   background: #000;
@@ -835,6 +884,7 @@ xfilter
     text-transform: uppercase;
     font-size: 1.3rem;
     font-weight: 700;
+    font-family: 'Roboto', sans-serif;
     padding-left: 24px;
     background-position: left center;
     -webkit-transition: color 0.3s;
@@ -886,7 +936,7 @@ xfilter
   margin: 0 auto;
 }
 
-@media (min-width: 1-24px) {
+@media (min-width: 1024px) {
   .albums {
     text-align: left;
   }
@@ -935,6 +985,7 @@ ul.album-detail3 {
   margin: 30px 0 0 0;
   font-size: 34px;
   font-weight:600;
+  font-family: 'Roboto', sans-serif;
 }
 
 ul.track-listings{

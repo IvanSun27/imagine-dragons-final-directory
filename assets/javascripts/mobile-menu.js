@@ -1,13 +1,14 @@
-function myFunction() {
-$(document).ready(function() {
-  $(".menu-icon").on("click", function() {
-    $("nav ul").toggleClass("showing");
-  });
-});
 
-$(windows).on("scroll", function() {
-  if($(windows).scrollTop()) {
-    $('nav').addClass('black');
-  }
-})
+$(document).ready(function(){
+$(window).resize(_.debounce(function(){
+if ($(window).width() > 736) {
+  $('#MainMenu').slideUp();
 }
+}, 500));
+$('#MenuIcon').on('click', function(){
+$('#MainMenu').slideToggle();
+});
+$('#MainMenu > a').on('click', function(){
+$('#MainMenu').slideUp();
+});
+})
