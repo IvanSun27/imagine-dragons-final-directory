@@ -8,7 +8,7 @@
 
 a {
   text-decoration: none;
-  color: black;
+  color: #303538;
 }
 
 .header {
@@ -64,7 +64,7 @@ nav a {
   }
 
 nav a:hover{
-    color: #959595;
+   color: #8C939F;
   }
 
 
@@ -100,7 +100,19 @@ nav a:hover{
 
 h1 {
   font-size: 30pt;
-  color: Black;
+  color: #303538;
+  text-decoration:none;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  color: #303538;
+  text-decoration:none;
+  font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+  color: #303538;
   text-decoration:none;
   font-family: 'Roboto', sans-serif;
 }
@@ -109,9 +121,10 @@ p {
   text-align: justify;
   text-justify: inter-word;
   line-height: 1.6;
-  text-indent: 24px;
+  padding-bottom: 15px;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+
 }
 
 .menu-icon {
@@ -339,7 +352,7 @@ p {
 .about-image {
   max-width: 250px;
   float: left;
-  padding:10 10 0 0;
+  padding:10 20 0 0;
 
 }
 
